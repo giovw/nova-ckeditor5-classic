@@ -33,7 +33,7 @@ export default {
 
     data () {
         return {
-            editor: ClassicEditor,
+            editor: DecoupledEditor,
             defaultEditorConfig: {
                 nova: {
                     resourceName: this.resourceName,
