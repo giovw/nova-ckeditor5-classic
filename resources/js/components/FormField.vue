@@ -20,6 +20,7 @@
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue'
 import ClassicEditor from 'ckeditor5-classic'
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
 
 export default {
@@ -68,8 +69,7 @@ export default {
                     'ImageCaption',
                     'ImageStyle',
                     'ImageTextAlternate',
-                    'ImageUpload',
-                    'ImageResize'
+                    'ImageUpload'
                 ]
                 editorConfig.image = {}
                 editorConfig.extraPlugins = []
