@@ -19,7 +19,7 @@
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 import CKEditor from '@ckeditor/ckeditor5-vue'
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic'
+import ClassicEditor from 'ckeditor5-classic'
 import NovaCKEditor5UploadAdapter from '../ckeditor5/upload-adapter'
 
 export default {
@@ -33,6 +33,7 @@ export default {
 
     data () {
         return {
+            containerClass: this.field.options.containerClass ? this.field.options.containerClass : '',
             editor: ClassicEditor,
             defaultEditorConfig: {
                 nova: {
@@ -67,7 +68,8 @@ export default {
                     'ImageCaption',
                     'ImageStyle',
                     'ImageTextAlternate',
-                    'ImageUpload'
+                    'ImageUpload',
+                    'ImageResize'
                 ]
                 editorConfig.image = {}
                 editorConfig.extraPlugins = []
